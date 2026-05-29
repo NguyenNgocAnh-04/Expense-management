@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charse="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Giao dich</title>
+        <!--css-->
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="giao_dich.css">
+
+    </head>
+    <body>
+        <div class="navbar">
+            <h2>Quản lý giao dịch</h2>
+            <br><br>
+        </div>
+        <div class="mau-giao-dich">
+            <h3>Thêm giao dịch</h3>
+            <br>
+            <form>
+
+                <input type="text" placeholder="Tên giao dịch">
+                <br><br>
+                <input type="number" placeholder="Số tiền">
+                <br><br>
+
+                <select>
+                    <option>Thu</option>
+                    <option>Chi</option>
+                </select>
+                <br><br>
+                <button>Thêm giao dịch</button>
+            </form>
+            <br><br>
+        </div>
+        <table border="1">
+            <tr>
+                <th>Tên giao dịch</th>
+                <th>Số tiền</th>
+                <th>Loại</th>
+            </tr>
+            
+            <tr>
+                <td>Đi lại</td>
+                <td>20</td>
+                <td>Chi</td>
+            </tr>
+        </table>
+        <br>
+        <!--tạo popup-->
+        <div class="popup">
+            <p>Thêm giao dịch thành công</p>
+            <button>Đóng</button>
+        </div>
+        <script src="giao_dich.js"></script>
+    </body>
+</html>
