@@ -1,6 +1,7 @@
 
 h2{
     text-align: center;
+    
 }
 
 .khung-lon{
@@ -20,11 +21,23 @@ h2{
    
 }
 
+.dang-ky{
+    display: flex;
+    align-items: center;
+    
+}
+
+#nut-dang-ky{
+    width: 100px;
+    height: 40px;
+}
+
 .dang-nhap-dang-ky{
     display: flex;
     align-items: center;
     gap: 5px;
 }
+
 
 input{
     width: 100%;
@@ -32,15 +45,33 @@ input{
 }
 
 button{
-    width: 50%;
-    background: #ddeff3;
+    width: 100%;
+    background: #f4c7e5;
     display: block;
     margin: auto;
     padding: 12px;
+    font-size: 14px;
 }
 
 a{
     display: block;
-    text-align: right;
+    text-align: center;
+    color: #031b1d;
     
+}
+
+.duong-ke{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.duong-ke::before,.duong-ke::after{
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #ccc;
+}
+.duong-ke span{
+    padding: 0 15px;
+    color: #666;
 }

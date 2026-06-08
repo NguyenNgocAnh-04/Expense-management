@@ -26,9 +26,17 @@ input{
     padding: 12px;
 }
 
-button{
-    display: block;
-    margin-left: auto;
-    background-color: #ddeff3;
+.dang-ky{
+    display: flex;
+    justify-content: flex-end;
+    
 }
+
+.dang-ky button{
+    background-color: #f4c7e5
+;
+
+}
+
+
 

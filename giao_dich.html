@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charse="UTF-8">
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Giao dich</title>
         <!--css-->
@@ -10,47 +10,62 @@
 
     </head>
     <body>
-        <div class="navbar">
-            <h2>Quản lý giao dịch</h2>
-            <br><br>
-        </div>
-        <div class="mau-giao-dich">
-            <h3>Thêm giao dịch</h3>
-            <br>
-            <form>
-
-                <input type="text" placeholder="Tên giao dịch">
-                <br><br>
-                <input type="number" placeholder="Số tiền">
-                <br><br>
-
-                <select>
-                    <option>Thu</option>
-                    <option>Chi</option>
-                </select>
-                <br><br>
-                <button>Thêm giao dịch</button>
-            </form>
-            <br><br>
-        </div>
-        <table border="1">
-            <tr>
-                <th>Tên giao dịch</th>
-                <th>Số tiền</th>
-                <th>Loại</th>
-            </tr>
+        <!--sidebar-->
+        <nav class="sidebar">
+            <h2>Quản lý chi tiêu</h2>
             
-            <tr>
-                <td>Đi lại</td>
-                <td>20</td>
-                <td>Chi</td>
-            </tr>
-        </table>
-        <br>
-        <!--tạo popup-->
-        <div class="popup">
-            <p>Thêm giao dịch thành công</p>
-            <button>Đóng</button>
+                <p>Tổng quan</p>
+                <p>Giao dịch</p>
+                <p>Danh mục</p>
+                <p>Biểu đồ</p>
+                <p>Cài đặt</p>
+            
+        </nav>
+        <div class="noi-dung">
+            <div class="navbar">
+                <h2>Quản lý giao dịch</h2>
+                <br><br>
+            </div>
+            <div class="mau-giao-dich">
+                <h3>Thêm giao dịch</h3>
+                <br>
+                <form>
+
+                    <input type="text" placeholder="Tên giao dịch">
+                    <br><br>
+                    <input type="number" placeholder="Số tiền">
+                    <br><br>
+
+                    <select>
+                        <option>Thu</option>
+                        <option>Chi</option>
+                    </select>
+                    <br><br>
+                    <button>Thêm giao dịch</button>
+                </form>
+                <br><br>
+            </div>
+            <div class="bang-giao-dich">
+                <table border="1">
+                    <tr>
+                        <th>Tên giao dịch</th>
+                        <th>Số tiền</th>
+                        <th>Loại</th>
+                    </tr>
+                    
+                    <tr>
+                        <td>Đi lại</td>
+                        <td>20</td>
+                        <td>Chi</td>
+                    </tr>
+                </table>
+            </div>
+            <br>
+            <!--tạo popup-->
+            <div class="popup">
+                <p>Thêm giao dịch thành công</p>
+                <button>Đóng</button>
+            </div>
         </div>
         <script src="giao_dich.js"></script>
     </body>

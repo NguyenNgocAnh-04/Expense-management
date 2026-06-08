@@ -47,3 +47,25 @@ img{
     margin: auto;
 }
 
+.sidebar{
+    width: 220px;
+    min-height: 100vh;
+    color: white;
+    background-color: #1e293b;
+    padding: 20px; 
+    
+}
+
+.sidebar h2{
+    margin-bottom: 30px;
+}
+
+.sidebar p{
+    padding: 12px;
+    border-radius: 8px;
+    cursor:pointer;
+}
+
+.sidebar p:hover{
+    background-color: #334155;
+}

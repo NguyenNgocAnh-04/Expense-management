@@ -43,3 +43,30 @@ th{
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
 
 }
+
+body{
+    display: flex;
+}
+.noi-dung{
+   
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+
+
+}
+
+.mau-giao-dich{
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0.1);
+    margin-bottom: 25px;
+}
+
+.bang-giao-dich{
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}

@@ -2,47 +2,62 @@
 
 <html>
     <head>
-        <meta charse="UTF-8">
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Trang chu</title>
         <!--css-->
         <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="trang_chu.css">
 
     </head>
     <body>
         <!--sidebar-->
-        <div class="sidebar">
+        <nav class="sidebar">
             <h2>Quản lý chi tiêu</h2>
-            <p>Tổng quan</p>
-            <p>Giao dịch</p>
-            <p>Danh mục</p>
-            <p>Biểu đồ</p>
-            <p>Cài đặt</p>
-        </div>
+            
+                <p>Tổng quan</p>
+                <p>Giao dịch</p>
+                <p>Danh mục</p>
+                <p>Biểu đồ</p>
+                <p>Cài đặt</p>
+            
+        </nav>
 
         <!--nội dung-->
-        <div class="noi-dung">
+        <main class="noi-dung">
             <!--navbar-->
-            <div class="navbar">
+            <header class="navbar">
                 <h2>Tổng quan</h2>
                 <!--Tạo card riêng-->
                 <button onclick="themCard()">
                     Thêm card
                 </button>
-                <div class="card">
+            </header>
+            <div class="cards">
+                <section class="card">
                     <h3>Tổng thu</h3>
                     <p>0 VNĐ</p>
-                </div>
-                <div class="card">
+                </section>
+                <section class="card">
                     <h3>Tổng chi</h3>
                     <p>0 VNĐ</p>
-                </div>
-                
+                </section>
+                <section class="card">
+                    <h3>Số dư hiện tại</h3>
+                    <p>0 VNĐ</p>
+                </section>
+                <section class="card">
+                    <h3>Tỉ lệ chi tiêu</h3>
+                    <p>0 %</p>
+                </section>
             </div>
+            
+            
+           
             <!--tạo biểu đồ-->
-            <div class="bieu-do">
+            <section class="bieu-do">
                 <h3>Biểu đồ chi tiêu</h3>
-            </div>
-        </div>
+            </section>
+        </main>
     </body>
 </html>
