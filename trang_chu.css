@@ -1,33 +1,34 @@
-body{
-    margin: 0;
-    display: flex;
-}
 .sidebar{
     width: 220px;
     min-height: 100vh;
     color: white;
     background-color: #1e293b;
     padding: 20px; 
-    
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar h2{
     margin-bottom: 30px;
 }
 
-.sidebar p{
+.sidebar a{
     padding: 12px;
     border-radius: 8px;
     cursor:pointer;
 }
-
-.sidebar p:hover{
+.sidebar a.active{
+    background-color: #475569;
+    border-radius: 8px;
+}
+.sidebar a:hover{
     background-color: #334155;
 }
 
 .noi-dung{
     flex: 1;
     padding: 20px;
+    justify-content: center;
 }
 
 .navbar{

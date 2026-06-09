@@ -6,43 +6,47 @@
         <title>Danh muc</title>
         <!--css-->
         <link rel="stylesheet" href="main.css">
-
+        <link rel="stylesheet" href="danh_muc.css">
 
     </head>
     <body>
         <!--sidebar-->
         <nav class="sidebar">
             <h2>Quản lý chi tiêu</h2>
-            
-                <p>Tổng quan</p>
-                <p>Giao dịch</p>
-                <p>Danh mục</p>
-                <p>Biểu đồ</p>
-                <p>Cài đặt</p>
-            
+                <a href="trang_chu.html">Trang chủ</a>
+                <a href="giao_dich.html">Giao dịch</a>
+                <a href="danh_muc.html">Danh mục</a>
+                <a href="thong_ke.html">Thống kê</a>
+                <a href="tai_khoan.html">Tài khoản</a>
         </nav>
-        <div class="tieu-de-trang">
-            <h1>Quản lý danh mục</h1>
-            <br><br>
-        </div>
+        <!--noi dung-->
+        <div class="noi-dung">
+            <div class="tieu-de-trang">
+                <h1>Quản lý danh mục</h1>
+            </div>
 
-        <div class="mau-danh-muc">
-            <h3>Thêm danh mục</h3>
-            <br>
-            <form>
-                <input type="text" placeholder="Nhập tên danh mục">
-                <button>Thêm</button>
-            </form>
-        </div>
-        <br>
-        <div class="danh-sach-danh-muc">
-            <h3>Danh sách danh mục</h3>
-            <br>
-            <ul>
-                <li>A</li>
-                <li>B</li>
-                <li>C</li>
-            </ul>
+            <div class="mau-danh-muc">
+                <h3>Thêm danh mục</h3>
+                <br>
+                <form>
+                    <input type="text" placeholder="Nhập tên danh mục">
+                    <button>Thêm</button>
+                </form>
+            </div>
+            <div class="danh-sach-danh-muc">
+                <h3>Danh sách danh mục</h3>
+                <br>
+                <div class="cards">
+                    <section class="card">
+                        <h4>Đi lại</h4>
+                        <p>0 VNĐ</p>
+                    </section>
+                    <section class="card">
+                        <h4>Tiền ăn</h4>
+                        <p>0 VNĐ</p>
+                    </section>
+                </div>
+            </div>
         </div>
     </body>
 </html>
