@@ -3,26 +3,82 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tong tin nguoi dung</title>
+        <title>Thong tin ca nhan</title>
         <!--css-->
         <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="tai_khoan.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
     </head>
     <body>
         <!--sidebar-->
         <nav class="sidebar">
-            <h2>Quản lý chi tiêu</h2>
-                <a href="trang_chu.html">Trang chủ</a>
-                <a href="giao_dich.html">Giao dịch</a>
-                <a href="danh_muc.html">Danh mục</a>
-                <a href="thog_ke.html">Thống kê</a>
-                <a href="tai_khoan.html">Tài khoản</a>
+            <div class="profile">
+                <img src="anime picture.jpg" alt="avatar">
+                <h3>Ahhihi</h3>
+            </div>
+            <br>
+            <a href="trang_chu.html">🏠 Trang chủ</a>
+            <a href="giao_dich.html">💰 Giao dịch</a>
+            <a href="danh_muc.html">📂 Danh mục</a>
+            <a href="thong_ke.html">📊 Thống kê</a>
+            <a href="tai_khoan.html">👤 Tài khoản</a>
         </nav>
-        <div class="thong-tin-nguoi-dung">
-            <h1>Thông tin người dùng</h1>
-            <p id="ten-dang-nhap"></p>
-            <p id="email"></p>
-            <p id="mat-khau"></p>
+        <div class="noi-dung">
+            <h2>Thông tin cá nhân</h2>
+            <br><br>
+            <div class="thong-tin">
+                <!--Tạo các khung thông tin người dùng-->
+                <div class="thong-tin-item">
+                    <div class="icon">📷</div>
+                    <div class="content">
+                        <h3>Ảnh hồ sơ</h3>
+                        <p>Nhấn để thay ảnh</p>
+                    </div>
+                    <div class="avatar">N</div>
+                </div>
+
+                <div class="thong-tin-item">
+                    <div class="icon">👤</div>
+                    <div class="content">
+                        <h3>Họ và Tên</h3>
+                        <p>Ngoc</p>
+                    </div>
+                </div>
+
+                <div class="thong-tin-item">
+                    <div class="icon">⚧</div>
+                    <div class="content">
+                        <h3>Giới tính</h3>
+                        <p>Nữ</p>
+                    </div>
+                </div>
+
+                <div class="thong-tin-item">
+                    <div  class="icon">✉</div>
+                    <div class="content">
+                        <h3>Email</h3>
+                        <p>abc@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="thong-tin-item">
+                    <div class="icon">📞</div>
+                    <div class="content">
+                        <h3>Số điện thoại</h3>
+                        <p>0192</p>
+                    </div>
+                </div>
+
+                <div class="thong-tin-item">
+                    <div class="icon">🎂</div>
+
+                    <div class="content">
+                        <h3>Ngày sinh</h3>
+                        <p>01/01/2000</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </body>

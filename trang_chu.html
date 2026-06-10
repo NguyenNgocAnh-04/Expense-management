@@ -8,54 +8,65 @@
         <!--css-->
         <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="trang_chu.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
     </head>
     <body>
         <!--sidebar-->
         <nav class="sidebar">
-            <h2>Quản lý chi tiêu</h2>
-                <a href="trang_chu.html">Trang chủ</a>
-                <a href="giao_dich.html">Giao dịch</a>
-                <a href="danh_muc.html">Danh mục</a>
-                <a href="thong_ke.html">Thống kê</a>
-                <a href="tai_khoan.html">Tài khoản</a>
+            <div class="profile">
+                <img src="anime picture.jpg" alt="avatar">
+                <h3>Ahhihi</h3>
+            </div>
+            <br>
+            <a href="trang_chu.html">🏠 Trang chủ</a>
+            <a href="giao_dich.html">💰 Giao dịch</a>
+            <a href="danh_muc.html">📂 Danh mục</a>
+            <a href="thong_ke.html">📊 Thống kê</a>
+            <a href="tai_khoan.html">👤 Tài khoản</a>
         </nav>
 
         <!--nội dung-->
         <main class="noi-dung">
             <!--navbar-->
             <header class="navbar">
-                <h2>Tổng quan</h2>
-                <!--Tạo card riêng-->
-                <button onclick="themCard()">
-                    Thêm card
-                </button>
+                <h1>Tổng quan</h1>
             </header>
+            <br><br>
             <div class="cards">
-                <section class="card">
+                <section class="tong-thu">
                     <h3>Tổng thu</h3>
                     <p>0 VNĐ</p>
                 </section>
-                <section class="card">
+                <section class="tong-chi">
                     <h3>Tổng chi</h3>
                     <p>0 VNĐ</p>
                 </section>
-                <section class="card">
+                <section class="so-du">
                     <h3>Số dư hiện tại</h3>
                     <p>0 VNĐ</p>
                 </section>
-                <section class="card">
+                <section class="ti-le">
                     <h3>Tỉ lệ chi tiêu</h3>
                     <p>0 %</p>
                 </section>
+                
             </div>
-            
-            
-           
-            <!--tạo biểu đồ-->
-            <section class="bieu-do">
-                <h3>Biểu đồ chi tiêu</h3>
-            </section>
+            <button>Thêm card</button>
+            <br>
+            <div class="khung-bieu-do">
+                <!--tạo biểu đồ-->
+                <section class="bieu-do">
+                    <h3>Chi tiêu theo tháng</h3>
+                </section>
+                <section class="bieu-do">
+                    <h3>Chi tiêu theo danh mục</h3>
+                </section>
+            </div>
+            <br><br>
+            <div class="giao-dich-gan-day">
+                <h3>Giao dịch gần đây</h3>
+            </div>
         </main>
     </body>
 </html>
