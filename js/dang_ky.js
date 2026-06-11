@@ -27,7 +27,7 @@ buttonDangKy.addEventListener("click", function(event){
     let taiKhoan = {
         tenDangNhap: ten,
         email: mail,
-        matkhau: mk
+        matKhau: mk
     };
 
     localStorage.setItem(
