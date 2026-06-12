@@ -32,11 +32,7 @@ h2{
     height: 40px;
 }
 
-.dang-nhap-dang-ky{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
+
 
 
 input{
@@ -74,4 +70,11 @@ a{
 .duong-ke span{
     padding: 0 15px;
     color: #666;
+}
+#buttonDangNhap {
+    position: relative;
+    z-index: 10; /* đẩy button lên trên */
+}
+.duong-ke {
+    pointer-events: none; /* div này bỏ qua mọi sự kiện click */
 }
