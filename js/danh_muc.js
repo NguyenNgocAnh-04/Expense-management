@@ -2,8 +2,7 @@ let danhSachDanhMuc = [];
 
 //luu du lieu
 function luuDuLieu(){
-    localStorage.setItem("danhMuc",
-        JSON.stringify(danhSachDanhMuc));
+    localStorage.setItem("danhMuc", JSON.stringify(danhSachDanhMuc));
 }
 
 //lay du lieu
@@ -31,6 +30,7 @@ function hienThiDanhMuc(){
         </div> `;
 
         danhSach.appendChild(card);
+        
     }
 }
 //them danh muc

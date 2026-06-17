@@ -38,6 +38,29 @@ function hienThiBang(){
         bang.appendChild(hang);
     }
 }
+//tai danh muc
+function taiDanhMuc(){
+    const duLieu =
+    localStorage.getItem("danhMuc");
+    if(!duLieu){
+        return;
+    }
+    const danhSachDanhMuc =
+    JSON.parse(duLieu);
+    const select =
+    document.getElementById("danh-muc");
+    select.innerHTML = "";
+    for(let i = 0;
+        i < danhSachDanhMuc.length;
+        i++)
+    {
+        const option = document.createElement("option");
+        option.value = danhSachDanhMuc[i].ten;
+        option.textContent = danhSachDanhMuc[i].ten;
+        select.appendChild(option);
+    }
+
+}
 //them giao dich
 function themGiaoDich(){
     const ngay = document.getElementById("ngay-giao-dich").value ;
@@ -111,5 +134,6 @@ document.getElementById("nut-them-giao-dich").addEventListener("click", function
 });
 document.getElementById("nut-dong-popup").addEventListener("click", anPopup);
 
+taiDanhMuc();
 taiDuLieu();
 hienThiBang();
