@@ -41,11 +41,11 @@
                             <option>Thu</option>
                             <option>Chi</option>
                         </select>
-                        <input type="date" >
+                        <input type="date" id="ngay-giao-dich" >
                         <select id="danh-muc">
                             <option>Ăn uống</option>
                             <option>Đi lại</option>
-                            <opiton>Học tập</opiton>
+                            <option>Học tập</option>
                             <option>Lương</option>
                             <option>Giải trí</option>
                         </select>
@@ -66,23 +66,14 @@
                         <th>Thao tác</th>
                     </tr>
                     
-                    <tr>
-                        <td>09/06/2026</td>
-                        <td>Đi lại</td>
-                        <td>20</td>
-                        <td>Chi</td>
-                        <td>Đi lại</td>
-                        <td>
-                            <button>Xóa</button>
-                        </td>
-                    </tr>
+
                 </table>
             </div>
             <br>
             <!--tạo popup-->
-            <div class="popup">
+            <div class="popup" id="popup">
                 <p>Thêm giao dịch thành công</p>
-                <button>Đóng</button>
+                <button id="nut-dong-popup">Đóng</button>
             </div>
         </div>
         <script src="js/giao_dich.js"></script>

@@ -37,6 +37,10 @@ input{
 ;
 
 }
-
+.khung-lon {
+    background-image: url('anh_nen_dky_dn.jpg');
+    background-size: cover;
+    background-position: center;
+}
 
 

@@ -34,16 +34,15 @@ th{
     padding: 15px;
 }
 
-.popup{
-    display: none;
+#popup{
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    top: 70px;
+    left: 49%;
+    transform: translateY(-10%);
+    padding: 12px 30px;
+    background: #4CAF50;
+    color: white;
+    border-radius: 8px;
 }
 
 .noi-dung{

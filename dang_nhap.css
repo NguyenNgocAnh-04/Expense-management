@@ -78,3 +78,8 @@ a{
 .duong-ke {
     pointer-events: none; /* div này bỏ qua mọi sự kiện click */
 }
+.khung-lon {
+    background-image: url('anh_nen_dky_dn.jpg');
+    background-size: cover;
+    background-position: center;
+}
