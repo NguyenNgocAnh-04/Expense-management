@@ -28,57 +28,74 @@
             <br><br>
             <div class="thong-tin">
                 <!--Tạo các khung thông tin người dùng-->
-                <div class="thong-tin-item">
+                <div class="thong-tin-item" >
                     <div class="icon">📷</div>
                     <div class="content">
                         <h3>Ảnh hồ sơ</h3>
-                        <p>Nhấn để thay ảnh</p>
+                        <p id="thay-anh">Nhấn để thay ảnh</p>
                     </div>
                     <div class="avatar">N</div>
                 </div>
 
-                <div class="thong-tin-item">
+                <div class="thong-tin-item" id="item-ho-ten">
                     <div class="icon">👤</div>
                     <div class="content">
                         <h3>Họ và Tên</h3>
-                        <p>Ngoc</p>
+                        <p id="hien-thi-ho-ten">Ngoc</p>
                     </div>
                 </div>
 
-                <div class="thong-tin-item">
+                <div class="thong-tin-item" id="item-gioi-tinh">
                     <div class="icon">⚧</div>
                     <div class="content">
                         <h3>Giới tính</h3>
-                        <p>Nữ</p>
+                        <p id="hien-thi-gioi-tinh">Nữ</p>
                     </div>
                 </div>
 
-                <div class="thong-tin-item">
+                <div class="thong-tin-item" id="item-email">
                     <div  class="icon">✉</div>
                     <div class="content">
                         <h3>Email</h3>
-                        <p>abc@gmail.com</p>
+                        <p id="hien-thi-email">abc@gmail.com</p>
                     </div>
                 </div>
 
-                <div class="thong-tin-item">
+                <div class="thong-tin-item" id="item-so-dien-thoai">
                     <div class="icon">📞</div>
                     <div class="content">
                         <h3>Số điện thoại</h3>
-                        <p>0192</p>
+                        <p id="hien-thi-so-dien-thoai">0192</p>
                     </div>
                 </div>
 
-                <div class="thong-tin-item">
+                <div class="thong-tin-item" id="item-ngay-sinh">
                     <div class="icon">🎂</div>
-
                     <div class="content">
                         <h3>Ngày sinh</h3>
-                        <p>01/01/2000</p>
+                        <p id="hien-thi-ngay-sinh">01/01/2000</p>
+                    </div>
+                </div>
+            </div>
+            <div id="popup-chinh-sua" class="popup">
+                <div class="popup-content">
+                    <h2 id="tieu-de-popup">
+                        Chỉnh sửa
+                    </h2>
+                    <input
+                        type="text"
+                        id="input-popup">
+                    <div class="popup-buttons">
+                        <button id="nut-luu-popup">
+                            Lưu
+                        </button>
+                        <button id="nut-huy-popup">
+                            Hủy
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-
+        <script src ="js/tai_khoan.js" ></script>
     </body>
 </html>

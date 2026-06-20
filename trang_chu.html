@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="main.css">
         <link rel="stylesheet" href="trang_chu.css">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+        <!--Chat.js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 
     </head>
     <body>
@@ -22,7 +24,6 @@
             <a href="trang_chu.html" class="active">🏠 Trang chủ</a>
             <a href="giao_dich.html">💰 Giao dịch</a>
             <a href="danh_muc.html">📂 Danh mục</a>
-            
             <a href="tai_khoan.html">👤 Tài khoản</a>
         </nav>
 
@@ -36,37 +37,41 @@
             <div class="cards">
                 <section class="tong-thu">
                     <h3>Tổng thu</h3>
-                    <p>0 đ</p>
+                    <p id="hien-thi-tong-thu">0 đ</p>
                 </section>
                 <section class="tong-chi">
                     <h3>Tổng chi</h3>
-                    <p>0 đ</p>
+                    <p id="hien-thi-tong-chi">0 đ</p>
                 </section>
                 <section class="so-du">
                     <h3>Số dư hiện tại</h3>
-                    <p>0 đ</p>
+                    <p id="hien-thi-so-du">0 đ</p>
                 </section>
                 <section class="ti-le">
                     <h3>Tỉ lệ chi tiêu</h3>
-                    <p>0 %</p>
+                    <p id="hien-thi-ti-le">0 %</p>
                 </section>
                 
             </div>
-            <button>Thêm card</button>
+            
             <br>
             <div class="khung-bieu-do">
                 <!--tạo biểu đồ-->
                 <section class="bieu-do">
                     <h3>Chi tiêu theo tháng</h3>
+                    <canvas id="bieu-do-thang"></canvas>
                 </section>
                 <section class="bieu-do">
                     <h3>Chi tiêu theo danh mục</h3>
+                    <canvas id="bieu-do-danh-muc"></canvas>
                 </section>
             </div>
             <br><br>
             <div class="giao-dich-gan-day">
                 <h3>Giao dịch gần đây</h3>
+                <div id="danh-sach-gan-day"></div>
             </div>
         </main>
+        <script src = "js/trang_chu.js"></script>
     </body>
 </html>
