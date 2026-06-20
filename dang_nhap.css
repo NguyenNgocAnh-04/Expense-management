@@ -1,7 +1,12 @@
-
 h2{
     text-align: center;
-    
+    color: #6b0832;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(180deg,#fff4f8 0%, #fffafc 100%);
+    margin:0;
+    min-height:100vh;
 }
 
 .khung-lon{
@@ -10,21 +15,33 @@ h2{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('img/bg-pink-budget.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.khung-lon::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background: linear-gradient(180deg, rgba(255,245,250,0.8), rgba(255,250,253,0.85));
+    pointer-events:none;
 }
 
 .khung-dang-nhap{
-    width: 400px;
-    background-color: white;
+    width: 420px;
+    background-color: #ffffff;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-   
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(236,72,153,0.08);
+    border: 1px solid rgba(255,210,230,0.6);
+    position: relative;
+    z-index: 2;
 }
 
 .dang-ky{
     display: flex;
     align-items: center;
-    
 }
 
 #nut-dang-ky{
@@ -32,28 +49,31 @@ h2{
     height: 40px;
 }
 
-
-
-
 input{
     width: 100%;
-    padding: 15px;
+    padding: 13px;
+    border: 1px solid #ffd6e8;
+    border-radius: 10px;
+    background: #fff;
+    box-sizing: border-box;
 }
 
 button{
     width: 100%;
-    background: #f4c7e5;
+    background: linear-gradient(90deg,#ff85b8,#ff4d95);
+    color: white;
     display: block;
     margin: auto;
     padding: 12px;
     font-size: 14px;
+    border-radius: 10px;
+    border: none;
 }
 
 a{
     display: block;
     text-align: center;
-    color: #031b1d;
-    
+    color: #6b0832;
 }
 
 .duong-ke{
@@ -65,21 +85,16 @@ a{
     content: "";
     flex: 1;
     height: 1px;
-    background-color: #ccc;
+    background-color: #ffdfe9;
 }
 .duong-ke span{
     padding: 0 15px;
-    color: #666;
+    color: #8b2746;
 }
 #buttonDangNhap {
     position: relative;
-    z-index: 10; /* đẩy button lên trên */
+    z-index: 10;
 }
 .duong-ke {
-    pointer-events: none; /* div này bỏ qua mọi sự kiện click */
-}
-.khung-lon {
-    background-image: url('anh_nen_dky_dn.jpg');
-    background-size: cover;
-    background-position: center;
+    pointer-events: none;
 }

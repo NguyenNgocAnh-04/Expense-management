@@ -16,26 +16,42 @@ function taiDuLieu(){
 
 //hien thi
 function hienThiBang(){
-    const bang = document.querySelector(".bang-giao-dich table");
-    bang.innerHTML= "";
-    for (let i = 1; i < danhSachGiaoDich.length; i++){
+    const table = document.querySelector(".bang-giao-dich table");
+    if(!table) return;
+
+    // đảm bảo có tbody
+    let tbody = table.querySelector("tbody");
+    if(!tbody){
+        tbody = document.createElement("tbody");
+        table.appendChild(tbody);
+    }
+    // sắp xếp danhSach theo ngày giảm dần (mới -> cũ)
+    danhSachGiaoDich.sort((a,b) => {
+        const da = _parseToISO(a.ngay || "");
+        const db = _parseToISO(b.ngay || "");
+        return db.localeCompare(da);
+    });
+
+    tbody.innerHTML= "";
+    for (let i = 0; i < danhSachGiaoDich.length; i++){
         const gd = danhSachGiaoDich[i];
         const hang = document.createElement("tr");
 
         const mauTien = gd.loai === "Thu" ? "green" : "red";
         const kyHieu = gd.loai === "Thu" ? "+" : "-";
-        
+        const soTienText = gd.soTien != null ? Number(gd.soTien).toLocaleString() + " đ" : "";
+
         hang.innerHTML = `
         <td>${gd.ngay}</td>
         <td>${gd.ten}</td>
-        <td style="color:${mauTien}">${kyHieu}${Number(gd.soTien).toLocaleString()} đ</td>
+        <td style="color:${mauTien}">${kyHieu}${soTienText}</td>
         <td>${gd.loai}</td>
         <td>${gd.danhMuc}</td>
         <td>
             <button onclick="xoaGiaoDich(${gd.id})">Xóa</button>
         </td>
         `;
-        bang.appendChild(hang);
+        tbody.appendChild(hang);
     }
 }
 //tai danh muc
@@ -122,18 +138,36 @@ function anPopup() {
 
 //xoa form
 function xoaForm(){
-    document.getElementById("ten-giao-dich").value = "";
-    document.getElementById("so-tien").value = "";
-    document.getElementById("ngay-giao-dich").value = "";
+    const elTen = document.getElementById("ten-giao-dich");
+    const elSo = document.getElementById("so-tien");
+    const elNgay = document.getElementById("ngay-giao-dich");
+    if(elTen) elTen.value = "";
+    if(elSo) elSo.value = "";
+    if(elNgay) elNgay.value = "";
 }
 
 //addEventListener
-document.getElementById("nut-them-giao-dich").addEventListener("click", function(e){
+const nutThem = document.getElementById("nut-them-giao-dich");
+if(nutThem) nutThem.addEventListener("click", function(e){
     e.preventDefault();
     themGiaoDich();
 });
-document.getElementById("nut-dong-popup").addEventListener("click", anPopup);
+const nutDongPopup = document.getElementById("nut-dong-popup");
+if(nutDongPopup) nutDongPopup.addEventListener("click", anPopup);
+
+// Hàm parse ngày (hỗ trợ dd/mm/yyyy và yyyy-mm-dd)
+function _parseToISO(dateStr){
+    if (!dateStr) return "";
+    dateStr = dateStr.trim();
+    if (/^\d{2}\/\d{2}\/\d{4}$/.test(dateStr)){
+        const [d,m,y] = dateStr.split("/");
+        return `${y}-${m.padStart(2,'0')}-${d.padStart(2,'0')}`;
+    }
+    if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) return dateStr;
+    return dateStr;
+}
 
 taiDanhMuc();
 taiDuLieu();
 hienThiBang();
+

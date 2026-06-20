@@ -66,29 +66,9 @@ function hienThiThongTin(){
             box.textContent = (thongTin.hoTen && thongTin.hoTen.trim().length > 0) ? thongTin.hoTen.trim().charAt(0).toUpperCase() : "N";
         }
     }
-    updateSidebarProfile();
-}
-function updateSidebarProfile(){
-    try{
-        const stored = localStorage.getItem("thongTin");
-        if (!stored) return;
-        const info = JSON.parse(stored);
-        const sideImg = document.querySelector(".sidebar .profile img");
-        const sideName = document.querySelector(".sidebar .profile h3");
-        if (sideImg){
-            // nếu không có avatar thì giữ ảnh mặc định trong src
-            sideImg.src = info.avatar || sideImg.getAttribute("data-default") || sideImg.src;
-        }
-        if (sideName){
-            sideName.textContent = info.hoTen || sideName.textContent;
-        }
-    }catch(e){}
+    
 }
 
-// lắng nghe thay đổi localStorage từ tab khác để cập nhật sidebar realtime
-window.addEventListener("storage", (e) => {
-    if (e.key === "thongTin") updateSidebarProfile();
-});
 function moPopup(truong, tieuDe, loai){
     truongDangSua = truong;
     document.getElementById("tieu-de-popup").textContent = tieuDe;
