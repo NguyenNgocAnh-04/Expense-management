@@ -28,20 +28,22 @@
             <br><br>
             <div class="thong-tin">
                 <!--Tạo các khung thông tin người dùng-->
-                <div class="thong-tin-item" >
+                <div class="thong-tin-item" id="item-anh">
                     <div class="icon">📷</div>
                     <div class="content">
                         <h3>Ảnh hồ sơ</h3>
                         <p id="thay-anh">Nhấn để thay ảnh</p>
                     </div>
-                    <div class="avatar">N</div>
+                    <div class="avatar" id="avatar-box">
+                        <img id="avatar-img" src="" alt="avatar">
+                    </div>
                 </div>
 
                 <div class="thong-tin-item" id="item-ho-ten">
                     <div class="icon">👤</div>
                     <div class="content">
                         <h3>Họ và Tên</h3>
-                        <p id="hien-thi-ho-ten">Ngoc</p>
+                        <p id="hien-thi-ho-ten">Chưa cập nhật</p>
                     </div>
                 </div>
 
@@ -49,7 +51,7 @@
                     <div class="icon">⚧</div>
                     <div class="content">
                         <h3>Giới tính</h3>
-                        <p id="hien-thi-gioi-tinh">Nữ</p>
+                        <p id="hien-thi-gioi-tinh">Chưa cập nhật</p>
                     </div>
                 </div>
 
@@ -57,7 +59,7 @@
                     <div  class="icon">✉</div>
                     <div class="content">
                         <h3>Email</h3>
-                        <p id="hien-thi-email">abc@gmail.com</p>
+                        <p id="hien-thi-email">Chưa cập nhật</p>
                     </div>
                 </div>
 
@@ -65,7 +67,7 @@
                     <div class="icon">📞</div>
                     <div class="content">
                         <h3>Số điện thoại</h3>
-                        <p id="hien-thi-so-dien-thoai">0192</p>
+                        <p id="hien-thi-so-dien-thoai">Chưa cập nhật</p>
                     </div>
                 </div>
 
@@ -73,18 +75,22 @@
                     <div class="icon">🎂</div>
                     <div class="content">
                         <h3>Ngày sinh</h3>
-                        <p id="hien-thi-ngay-sinh">01/01/2000</p>
+                        <p id="hien-thi-ngay-sinh">Chưa cập nhật</p>
                     </div>
                 </div>
             </div>
+            <input type="file" id="input-file-avatar" accept="image/*" style="display:none">
+            
             <div id="popup-chinh-sua" class="popup">
                 <div class="popup-content">
                     <h2 id="tieu-de-popup">
                         Chỉnh sửa
                     </h2>
-                    <input
-                        type="text"
-                        id="input-popup">
+                    <div id="noi-dung-popup">
+                        <input
+                            type="text"
+                            id="input-popup">
+                    </div>
                     <div class="popup-buttons">
                         <button id="nut-luu-popup">
                             Lưu
@@ -97,5 +103,6 @@
             </div>
         </div>
         <script src ="js/tai_khoan.js" ></script>
+        <script src="js/sidebar.js"></script>
     </body>
 </html>

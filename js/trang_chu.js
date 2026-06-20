@@ -31,11 +31,17 @@ function tinhToan() {
 function hienThiCards(){
     const {tongThu, tongChi, soDu, tiLe} = tinhToan();
 
-    document.getElementById("hien-thi-tong-thu").textContent = tongThu.toLocaleString() + "đ";
-    document.getElementById("hien-thi-tong-chi").textContent = tongChi.toLocaleString() + "đ";
-    document.getElementById("hien-thi-so-du").textContent = soDu.toLocaleString() + "đ";
-    document.getElementById("hien-thi-ti-lư").textContent = tiLe.toLocaleString() + "đ";
+    const elTongThu = document.getElementById("hien-thi-tong-thu");
+    const elTongChi = document.getElementById("hien-thi-tong-chi");
+    const elSoDu   = document.getElementById("hien-thi-so-du");
+    const elTiLe   = document.getElementById("hien-thi-ti-le");
 
+    if (elTongThu) elTongThu.textContent = Number(tongThu).toLocaleString() + "đ";
+    if (elTongChi) elTongChi.textContent = Number(tongChi).toLocaleString() + "đ";
+    if (elSoDu)    elSoDu.textContent = Number(soDu).toLocaleString() + "đ";
+   
+    const tiLeNum = Number(tiLe); // đảm bảo là Number
+    if (elTiLe) elTiLe.textContent = tiLeNum.toLocaleString() + "%";
 }
 
 //hien thi giao dich gan day
@@ -43,29 +49,43 @@ function hienThiGiaoDichGanDay(){
     const khung = document.getElementById("danh-sach-gan-day");
     khung.innerHTML = "";
     if(danhSachGiaoDich.length === 0){
-        khung.innerHTML = "<p>Chưa có giao dịch nào</p>";
+        khung.innerHTML = "<p class='empty'>Chưa có giao dịch nào</p>";
         return;
     }
-   const gdGanDay = [...danhSachGiaoDich].reverse().slice(0, 5);
 
+    const table = document.createElement("table");
+    table.className = "giao-dich-table";
+    table.innerHTML = `
+        <thead>
+            <tr>
+                <th>Ngày</th>
+                <th>Giao dịch</th>
+                <th>Danh mục</th>
+                <th style="text-align:right">Số tiền</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    `;
+    const tbody = table.querySelector("tbody");
+
+    const gdGanDay = [...danhSachGiaoDich].reverse().slice(0, 8); // lấy 8 giao dịch gần nhất
     for (let i = 0; i < gdGanDay.length; i++) {
         const gd = gdGanDay[i];
-        const mauTien = gd.loai === "Thu" ? "green" : "red";
-        const kyHieu  = gd.loai === "Thu" ? "+"     : "-";
+        const tr = document.createElement("tr");
+        const amountText = Number(gd.soTien).toLocaleString();
+        const sign = gd.loai === "Thu" ? "+" : "-";
+        const typeClass = gd.loai === "Thu" ? "thu" : "chi";
 
-        const item = document.createElement("div");
-        item.className = "giao-dich-item";
-        item.innerHTML = `
-            <div class="gd-info">
-                <p class="gd-ten">${gd.ten}</p>
-                <p class="gd-phu">${gd.danhMuc} · ${gd.ngay}</p>
-            </div>
-            <p class="gd-so-tien" style="color:${mauTien}">
-                ${kyHieu}${Number(gd.soTien).toLocaleString()} đ
-            </p>
+        tr.innerHTML = `
+            <td class="gd-ngay">${gd.ngay}</td>
+            <td class="gd-ten">${gd.ten}</td>
+            <td class="gd-phu">${gd.danhMuc}</td>
+            <td class="gd-so-tien ${typeClass}">${sign}${amountText} đ</td>
         `;
-        khung.appendChild(item);
+        tbody.appendChild(tr);
     }
+
+    khung.appendChild(table);
 }
 
 //bieu do cot theo thang

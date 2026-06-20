@@ -6,23 +6,26 @@
 }
 .noi-dung h2{
     text-align: center;
+    color: #6b0536;
 }
 
 .thong-tin{
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background: linear-gradient(180deg,#fff6fb,#fff2f7);
     border-radius: 20px;
     overflow: hidden;
-    border-bottom: 3px solid #e5e7eb;
+    border: 1px solid #fde8f3;
+    box-shadow: 0 8px 30px rgba(203,94,136,0.08);
 }
+
 
 .thong-tin-item{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 20px;
-    padding: 20px 30px;
-    border-bottom: 2px solid #e5e7eb;
+    padding: 18px 24px;
+    border-bottom: 1px solid #fde6f3;
     cursor: pointer;
 }
 .thong-tin-item:hover{
@@ -32,19 +35,39 @@
     width: 50px;
     display: flex;
     justify-content: center;
-    font-size: 28px;
+    font-size: 22px;
 }
 .thong-tin-item h3{
     margin: 0;
+    color: #5a0530;
+    font-weight: 600;
 }
 .thong-tin-item p{
     margin-top: 5px;
-    color: #666;
+    color: #7a4a5a;
 }
 
 .avatar{
     margin-left: auto;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg,#ffdff0,#ffd3e8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7a0530;
+    font-weight: 700;
+    overflow: hidden;
+    border: 2px solid #ffd0e6;
 }
+.avatar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 .popup{
     display: none;
     position: fixed;
@@ -56,12 +79,48 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    z-index: 999;
 }
 .popup-content{
-    width: 350px;
+    width: 360px;
     background: white;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+#noi-dung-popup input, #noi-dung-popup select{
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #f2cfe0;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.popup-buttons{
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+    justify-content: flex-end;
+}
+.popup-buttons button{
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+#nut-luu-popup{
+    background: linear-gradient(90deg,#ff6ea1,#ff3b85);
+    color: white;
+}
+#nut-huy-popup{
+    background: #fff;
+    border: 1px solid #ffd6e8;
+    color: #7a0530;
+}
+
+/* responsive nhỏ */
+@media (max-width:600px){
+    .thong-tin-item{ padding: 14px; }
+    .avatar{ width:48px; height:48px; }
 }

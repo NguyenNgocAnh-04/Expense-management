@@ -1,30 +1,3 @@
-/*.sidebar{
-    width: 220px;
-    min-height: 100vh;
-    color: white;
-    background-color: #1e293b;
-    padding: 20px; 
-    display: flex;
-    flex-direction: column;
-}
-
-.sidebar h2{
-    margin-bottom: 30px;
-}
-
-.sidebar a{
-    padding: 12px;
-    border-radius: 8px;
-    cursor:pointer;
-}
-.sidebar a.active{
-    background-color: #475569;
-    border-radius: 8px;
-}
-.sidebar a:hover{
-    background-color: #334155;
-}
-*/
 
 .noi-dung{
     flex: 1;
@@ -52,58 +25,123 @@ button:hover{
     margin-bottom: 30px;
 }
 
-.tong-thu, .tong-chi, .so-du, .ti-le{ 
+.tong-thu{
     display: flex;
     flex: 1;
     flex-direction: column;
-    background-color: white;
-    gap: 20px;
-    padding: 20px;
+    gap: 12px;
+    padding: 18px;
     border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 18px rgba(16,185,129,0.12);
+    background: linear-gradient(135deg, #f0fff4 0%, #d1fae5 100%); /* xanh lá nhạt */
+    color: #065f46;
+    border-left: 4px solid #10b981;
+    min-width: 0;
+}
 
-}
-.tong-thu{
-    background: #FDF2F8;
-    color: #E11D8A;
-}
 .tong-chi{
-    background: #FDF2F8;
-    color: #BE185D;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 12px;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(236,72,153,0.10);
+    background: linear-gradient(135deg, #fff0f6 0%, #ffe4f1 100%); /* hồng nhẹ */
+    color: #9f1239;
+    border-left: 4px solid #ec4899;
+    min-width: 0;
 }
+
 .so-du{
-    background: #FDF2F8;
-    color: #C026D3;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 12px;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(99,102,241,0.10);
+    background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%); /* xanh dương / tím nhạt */
+    color: #1e3a8a;
+    border-left: 4px solid #6366f1;
+    min-width: 0;
 }
+
 .ti-le{
-    background: #FDF2F8;
-    color: #EC4899;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 12px;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(251,146,60,0.10);
+    background: linear-gradient(135deg, #fff7ed 0%, #fff1e6 100%); /* cam / san hô */
+    color: #9a3412;
+    border-left: 4px solid #fb923c;
+    min-width: 0;
 }
-h3{
-    font-size: 15px;
-    color: rgb(14, 2, 2);
+/* tiêu đề và giá trị trong card */
+.tong-thu h3, .tong-chi h3, .so-du h3, .ti-le h3{
+    color: inherit;
 }
 .tong-thu p, .tong-chi p, .so-du p, .ti-le p{
+    color: inherit;
     font-size: 25px;
+    margin: 0;
+    font-weight: 700;
 }
 
-
+.giao-dich-gan-day {
+    background-color: white;
+    height: auto;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+}
+.giao-dich-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    font-family: inherit;
+    font-size: 14px;
+}
+.giao-dich-table thead th{
+    text-align: left;
+    padding: 10px 12px;
+    background: linear-gradient(90deg,#ffedf6,#fff5fb);
+    color: #7a0530;
+    font-weight: 700;
+    border-bottom: 1px solid #fde6f0;
+}
+.giao-dich-table tbody td{
+    padding: 10px 12px;
+    border-bottom: 1px solid #f6e6ee;
+    vertical-align: middle;
+}
+.giao-dich-table tbody tr:nth-child(even){
+    background: #fff8fb;
+}
+.giao-dich-table tbody tr:hover{
+    background: #fff0f6;
+}
+.gd-so-tien{
+    text-align: right;
+    font-weight: 700;
+}
+.gd-so-tien.thu{ color: #059669; } 
+.gd-so-tien.chi{ color: #be185d; }
 .khung-bieu-do{
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
+.giao-dich-gan-day .empty{
+    color: #8b2746;
+    padding: 12px;
+}
 
 .bieu-do{
     flex: 1;
-    background-color: white;
-    height: 350px;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.giao-dich-gan-day{
     background-color: white;
     height: 350px;
     border-radius: 12px;
