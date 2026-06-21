@@ -5,6 +5,11 @@ const matKhau = document.getElementById("matKhau")
 const xacNhanMatKhau = document.getElementById("xacNhanMatKhau");
 
 const buttonDangKy = document.getElementById("buttonDangKy");
+function validatePassword(pw){
+    if (!pw || pw.length < 8) return "Mật khẩu phải có ít nhất 8 ký tự.";
+    if (/\s/.test(pw)) return "Mật khẩu không được chứa khoảng trắng.";
+    return ""; // hợp lệ
+}
 buttonDangKy.addEventListener("click", function(event){
     event.preventDefault();
     let ten = tenDangNhap.value ;
@@ -18,6 +23,12 @@ buttonDangKy.addEventListener("click", function(event){
         xacNhanMK === "" 
     ) {
         alert("Vui lòng nhập đủ thông tin");
+        return;
+    }
+
+    const pwErr = validatePassword(mk);
+    if (pwErr) {
+        alert(pwErr);
         return;
     }
     if(mk !== xacNhanMK){
@@ -36,4 +47,5 @@ buttonDangKy.addEventListener("click", function(event){
     );
     alert("Đăng kí thành công");
     window.location.href = "dang_nhap.html";
+    
 });
