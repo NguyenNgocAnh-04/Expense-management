@@ -24,3 +24,14 @@ updateSidebarProfile();
 window.addEventListener("storage", function(e) {
     if (e.key === "thongTin") updateSidebarProfile();
 });
+//tao ham dang xuat
+function dangXuat() {
+    const xacNhan = confirm("Bạn có chắc muốn đăng xuất không?");
+    if (!xacNhan) return;
+
+    // Xóa session đăng nhập (giữ lại tài khoản để đăng nhập lại)
+    localStorage.removeItem("dangNhap");
+    
+    // Chuyển về trang đăng nhập
+    window.location.href = "dang_nhap.html";
+}

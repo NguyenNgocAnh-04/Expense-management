@@ -11,7 +11,6 @@
 
     </head>
     <body>
-        <!--sidebar-->
         <nav class="sidebar">
             <div class="profile">
                 <img src="anime picture.jpg" alt="avatar">
@@ -22,39 +21,43 @@
             <a href="giao_dich.html">💰 Giao dịch</a>
             <a href="danh_muc.html" class="active">📂 Danh mục</a>
             <a href="tai_khoan.html">👤 Tài khoản</a>
+            <div class="sidebar-footer">
+                <a href="dang_nhap.html" class="nut-dang-xuat">↪ Đăng xuất</a>
+            </div>
         </nav>
-        <!--noi dung-->
+
         <div class="noi-dung">
             <div class="tieu-de-trang">
                 <h1>Quản lý danh mục</h1>
             </div>
+            <br>
             <div class="the-them-danh-muc">
-                <div class="mau-danh-muc">
-                    <h3>Thêm danh mục</h3>
-                    <br>
-                    <form>
-                        <input type="text" id="ten-danh-muc" placeholder="Nhập tên danh mục">
-                        <button id="button-them">Thêm</button>
-                    </form>
+                <h3>Thêm danh mục mới</h3>
+                <div class="form-them">
+                    <input type="text" id="ten-danh-muc" placeholder="Nhập tên danh mục">
+                    <button id="button-them">+ Thêm danh mục</button>
                 </div>
-             </div>
-            <h3>Danh sách danh mục</h3>
-            <div class="danh-sach-danh-muc">
-                <br>
-                <section class="card">
-                    <h4>Đi lại</h4>
-                    <p>0 VNĐ</p>
-                </section>
-                <section class="card">
-                    <h4>Tiền ăn</h4>
-                    <p>0 VNĐ</p>
-                </section>
             </div>
-        
+
+            <div class="khung-danh-sach">
+                <h3 id="tieu-de-danh-sach">Danh sách danh mục (0)</h3>
+                <div class="danh-sach-danh-muc" id="danh-sach-danh-muc"></div>
+            </div>
         </div>
         <footer class="footer-trang">
             ♥ Quản lý chi tiêu thông minh – Kiểm soát tài chính, làm chủ cuộc sống
         </footer>
+        <!-- Popup sửa -->
+        <div class="overlay" id="overlay" onclick="dongPopup()"></div>
+        <div class="popup-sua" id="popup-sua">
+            <h3>Sửa tên danh mục</h3>
+            <input type="text" id="input-ten-moi" placeholder="Nhập tên mới">
+            <div class="popup-nut">
+                <button id="nut-huy" onclick="dongPopup()">Hủy</button>
+                <button id="nut-luu" onclick="luuSua()">Lưu</button>
+            </div>
+        </div>
+
         <script src="js/danh_muc.js"></script>
         <script src="js/sidebar.js"></script>
     </body>

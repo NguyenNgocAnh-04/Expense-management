@@ -26,7 +26,6 @@ buttonDangNhap.addEventListener("click", function(event){
     ){
         
         alert("Đăng nhập thành công");
-        console.log("B8");
         window.location.href = "trang_chu.html"; //Đn thành công chuyển sang trang chủ//
     }
     else{
@@ -35,3 +34,9 @@ buttonDangNhap.addEventListener("click", function(event){
     };
    
 });
+if (ten === taiKhoan.tenDangNhap && mk === taiKhoan.matKhau) {
+    // Lưu trạng thái đăng nhập
+    localStorage.setItem("dangNhap", "true"); // ← thêm dòng này
+    alert("Đăng nhập thành công");
+    window.location.href = "trang_chu.html";
+}
