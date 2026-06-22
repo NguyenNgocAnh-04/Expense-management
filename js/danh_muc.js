@@ -73,8 +73,8 @@ function hienThiDanhMuc() {
                 <button class="card-menu">⋮</button>
             </div>
             <div class="card-buttons">
-                <button class="nut-sua" onclick="moPopupSua(${dm.id})">✏️ Sửa</button>
-                <button class="nut-xoa" onclick="xoaDanhMuc(${dm.id})">🗑️ Xóa</button>
+                <button class="nut-sua" onclick="moPopupSua(${dm.id})"> Sửa</button>
+                <button class="nut-xoa" onclick="xoaDanhMuc(${dm.id})"> Xóa</button>
             </div>
         `;
         container.appendChild(card);

@@ -225,4 +225,4 @@ document.getElementById("nut-luu-popup").addEventListener("click",luuPopup);
 document.getElementById("nut-huy-popup").addEventListener("click",dongPopup);
 taiThongTin();
 hienThiThongTin();
-updateSidebarProfile();
+
